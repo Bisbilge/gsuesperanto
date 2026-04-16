@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}{% trans "Hakkımızda" %} - GSU Esperanto{% endblock %}
+{% block content %}
+<div class="max-w-3xl mx-auto px-4 py-12">
+  <h1 class="text-2xl font-bold mb-8">{% trans "Hakkımızda" %}</h1>
+  <div class="flex justify-center mb-8">
+    <div class="w-24 h-24 rounded-full flex items-center justify-center" style="background-color:#009a44">
+      <span class="text-white font-bold text-4xl">★</span>
+    </div>
+  </div>
+  <p class="text-gray-600 leading-relaxed mb-4">
+    {% blocktrans %}Galatasaray Üniversitesi Esperanto Kulübü, uluslararası iletişim dili Esperanto'yu tanıtmak ve yaymak amacıyla kurulmuştur.{% endblocktrans %}
+  </p>
+  <p class="text-gray-600 leading-relaxed">
+    {% blocktrans %}Esperanto, Ludwik Lazarz Zamenhof tarafından 1887 yılında oluşturulmuş, öğrenmesi kolay ve nötr bir uluslararası dildir. Kulübümüz aracılığıyla Esperanto öğrenme fırsatı bulabilir, etkinliklerimize katılabilir ve dünya genelindeki esperantistlerle bağlantı kurabilirsiniz.{% endblocktrans %}
+  </p>
+</div>
+{% endblock %}

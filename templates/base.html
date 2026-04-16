@@ -1,0 +1,76 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}GSU Esperanto{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            green: {
+              esperanto: '#009a44',
+              dark: '#007a35',
+              light: '#e6f5ed',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .nav-link { @apply text-gray-600 hover:text-green-esperanto transition-colors text-sm font-medium; }
+    .btn-green { @apply bg-green-esperanto text-white px-4 py-2 rounded-lg hover:bg-green-dark transition-colors text-sm font-semibold; }
+    .card { @apply border border-gray-100 rounded-xl p-5 hover:border-green-esperanto transition-colors; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-white text-gray-800">
+
+  <!-- Navbar -->
+  <header class="border-b border-gray-100 sticky top-0 bg-white z-50">
+    <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="{% url 'home' %}" class="font-bold text-green-esperanto text-lg tracking-tight">GSU Esperanto</a>
+
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="{% url 'home' %}" class="nav-link">{% trans "Ana Sayfa" %}</a>
+        <a href="{% url 'events' %}" class="nav-link">{% trans "Etkinlikler" %}</a>
+        <a href="{% url 'news' %}" class="nav-link">{% trans "Haberler" %}</a>
+        <a href="{% url 'about' %}" class="nav-link">{% trans "Hakkımızda" %}</a>
+        <a href="{% url 'contact' %}" class="nav-link">{% trans "İletişim" %}</a>
+      </nav>
+
+      <!-- Dil seçici -->
+      <div class="flex items-center gap-1">
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        <form action="{% url 'set_language' %}" method="post">
+          {% csrf_token %}
+          <input name="next" type="hidden" value="{{ request.get_full_path }}">
+          {% for lang in languages %}
+            <button type="submit" name="language" value="{{ lang.code }}"
+              class="px-2 py-1 rounded text-xs font-semibold transition-colors
+              {% if lang.code == LANGUAGE_CODE %}bg-green-esperanto text-white{% else %}text-gray-500 hover:text-green-esperanto{% endif %}">
+              {{ lang.code|upper }}
+            </button>
+          {% endfor %}
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="border-t border-gray-100 mt-auto">
+    <div class="max-w-5xl mx-auto px-4 py-6 flex items-center justify-between text-sm text-gray-400">
+      <span>© {% now "Y" %} GSU Esperanto Klubo. {% trans "Tüm hakları saklıdır." %}</span>
+      <span class="text-green-esperanto font-medium">★ Esperanto</span>
+    </div>
+  </footer>
+
+</body>
+</html>

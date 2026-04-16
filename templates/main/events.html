@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}{% trans "Etkinlikler" %} - GSU Esperanto{% endblock %}
+{% block content %}
+<div class="max-w-5xl mx-auto px-4 py-12">
+  <h1 class="text-2xl font-bold mb-8">{% trans "Etkinlikler" %}</h1>
+  {% if events %}
+    <div class="flex flex-col gap-4">
+      {% for event in events %}
+        <div class="card flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+          <div>
+            <h2 class="text-lg font-semibold">{{ event.title }}</h2>
+            {% if event.location %}<p class="text-sm text-gray-400 mt-1">📍 {{ event.location }}</p>{% endif %}
+            <p class="text-sm text-gray-600 mt-3">{{ event.description }}</p>
+          </div>
+          <div class="shrink-0">
+            <span class="inline-block text-xs font-semibold px-3 py-1 rounded-full" style="background-color:#e6f5ed;color:#009a44">
+              {{ event.date|date:"d F Y, H:i" }}
+            </span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="text-gray-400">{% trans "Henüz etkinlik yok." %}</p>
+  {% endif %}
+</div>
+{% endblock %}

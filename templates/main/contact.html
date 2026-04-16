@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}{% trans "İletişim" %} - GSU Esperanto{% endblock %}
+{% block content %}
+<div class="max-w-3xl mx-auto px-4 py-12">
+  <h1 class="text-2xl font-bold mb-8">{% trans "İletişim" %}</h1>
+  <div class="flex flex-col gap-5">
+    <div class="card">
+      <div class="text-sm text-gray-400 mb-1">{% trans "E-posta" %}</div>
+      <a href="mailto:esperanto@gsu.edu.tr" style="color:#009a44" class="font-medium hover:underline">esperanto@gsu.edu.tr</a>
+    </div>
+    <div class="card">
+      <div class="text-sm text-gray-400 mb-1">Instagram</div>
+      <a href="https://instagram.com/gsuesperanto" target="_blank" style="color:#009a44" class="font-medium hover:underline">@gsuesperanto</a>
+    </div>
+    <div class="card">
+      <div class="text-sm text-gray-400 mb-1">{% trans "Adres" %}</div>
+      <p class="text-gray-700">{% trans "Galatasaray Üniversitesi, Çırağan Cad. No:36, Beşiktaş, İstanbul" %}</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
