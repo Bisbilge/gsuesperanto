@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "Home",
+    "events": "Events",
+    "news": "News",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": "Galatasaray University Esperanto Club",
+    "subtitle": "Learn Esperanto, connect with the world.",
+    "eventsTitle": "Upcoming Events",
+    "newsTitle": "Latest News",
+    "viewAll": "View All",
+    "noEvents": "No upcoming events.",
+    "noPosts": "No news yet."
+  },
+  "events": {
+    "title": "Events",
+    "noEvents": "No events yet."
+  },
+  "news": {
+    "title": "News",
+    "noPosts": "No news yet."
+  },
+  "about": {
+    "title": "About Us",
+    "p1": "The Galatasaray University Esperanto Club was founded to promote and spread Esperanto, the international language of communication.",
+    "p2": "Esperanto was created by Ludwik Lazarz Zamenhof in 1887 as an easy-to-learn, neutral international language. Through our club, you can learn Esperanto, attend our events, and connect with Esperantists around the world."
+  },
+  "contact": {
+    "title": "Contact",
+    "email": "Email",
+    "instagram": "Instagram",
+    "address": "Address",
+    "addressValue": "Galatasaray University, Çırağan Cad. No:36, Beşiktaş, Istanbul"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

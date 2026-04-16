@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "events": "Etkinlikler",
+    "news": "Haberler",
+    "about": "Hakkımızda",
+    "contact": "İletişim"
+  },
+  "home": {
+    "hero": "Galatasaray Üniversitesi Esperanto Kulübü",
+    "subtitle": "Esperanto öğrenin, dünyayla bağ kurun.",
+    "eventsTitle": "Yaklaşan Etkinlikler",
+    "newsTitle": "Son Haberler",
+    "viewAll": "Tümünü Gör",
+    "noEvents": "Yaklaşan etkinlik yok.",
+    "noPosts": "Henüz haber yok."
+  },
+  "events": {
+    "title": "Etkinlikler",
+    "noEvents": "Henüz etkinlik yok."
+  },
+  "news": {
+    "title": "Haberler",
+    "noPosts": "Henüz haber yok."
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "p1": "Galatasaray Üniversitesi Esperanto Kulübü, uluslararası iletişim dili Esperanto'yu tanıtmak ve yaymak amacıyla kurulmuştur.",
+    "p2": "Esperanto, Ludwik Lazarz Zamenhof tarafından 1887 yılında oluşturulmuş, öğrenmesi kolay ve nötr bir uluslararası dildir. Kulübümüz aracılığıyla Esperanto öğrenme fırsatı bulabilir, etkinliklerimize katılabilir ve dünya genelindeki esperantistlerle bağlantı kurabilirsiniz."
+  },
+  "contact": {
+    "title": "İletişim",
+    "email": "E-posta",
+    "instagram": "Instagram",
+    "address": "Adres",
+    "addressValue": "Galatasaray Üniversitesi, Çırağan Cad. No:36, Beşiktaş, İstanbul"
+  },
+  "footer": {
+    "rights": "Tüm hakları saklıdır."
+  }
+}
